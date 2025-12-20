@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider With Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="slider_container">
+    <div class="slider_wrapper">
+
+        <div class="slider_item active" 
+             data-image="images/blackg.avif"
+             data-title="Creative Design Solution"
+             data-text="This is full detail about Creative Design Solution.">
+            <div class="slider_containent">
+                <h2 class="slide_title">Creative Design Solution</h2>
+                <p class="slide_description">Short description here.</p>
+                <a href="#" class="slide_button">Learn More</a>
+            </div>
+        </div>
+
+        <div class="slider_item"
+             data-image="images/girl.avif"
+             data-title="Modern UI Experience"
+             data-text="Full details about Modern UI Experience.">
+            <div class="slider_containent">
+                <h2 class="slide_title">Modern UI Experience</h2>
+                <p class="slide_description">Short description here.</p>
+                <a href="#" class="slide_button">Learn More</a>
+            </div>
+        </div>
+
+        <div class="slider_item"
+             data-image="images/white.avif"
+             data-title="Clean & Responsive"
+             data-text="Full details about Clean & Responsive Design.">
+            <div class="slider_containent">
+                <h2 class="slide_title">Clean & Responsive</h2>
+                <p class="slide_description">Short description here.</p>
+                <a href="#" class="slide_button">Learn More</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="slider_nav">
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal_content">
+        <span class="close">&times;</span>
+        <img id="modalImg">
+        <h2 id="modalTitle"></h2>
+        <p id="modalText"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
