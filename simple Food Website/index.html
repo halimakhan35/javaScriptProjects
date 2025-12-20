@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Food Website</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="logo">
+        <span class="logo-icon">🍴</span>
+        <span class="logo-text">Halima <span>Farman</span></span>
+      </div>
+
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
+        <a href="#">Location</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+
+    <section class="heading">
+      <div class="left">
+        <p>Are you Hungry ?</p>
+        <h1>Don't Wait</h1>
+        <p>Let’s start ordering food now</p>
+        <button id="orderBtn">Check Out Menu</button>
+      </div>
+
+      <div class="right"></div>
+    </section>
+
+    <!-- FOOD MENU -->
+    <section class="bottom" id="foodMenu">
+      <h2 class="menu-title">Our Menu</h2>
+      <div class="menu" id="menuContainer">
+        <!-- JS yahan food add karega -->
+      </div>
+    </section>
+
+    <!-- IMAGE OVERLAY -->
+    <div class="image-overlay" id="imageOverlay">
+      <span class="close-btn" id="closeOverlay">&times;</span>
+      <img id="overlayImg" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

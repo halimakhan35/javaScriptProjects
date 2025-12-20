@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(images/tanle.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+/* ================= HEADER ================= */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+/* ===== LOGO DESIGN ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo-icon {
+  font-size: 34px;
+  background: orange;
+  color: black;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 15px orange;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.logo-text span {
+  color: orange;
+}
+
+/* Logo Hover Effect */
+.logo:hover .logo-icon {
+  transform: rotate(15deg) scale(1.1);
+  transition: 0.3s;
+}
+
+.logo:hover .logo-text {
+  text-shadow: 0 0 15px orange;
+}
+
+/* NAV DESIGN */
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav a {
+  padding: 8px 18px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.nav a:hover {
+  background: orange;
+  color: black;
+}
+
+.nav a.active {
+  background: orange;
+  color: black;
+}
+
+/* SEARCH ICONS */
+.search i {
+  font-size: 22px;
+  margin-left: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
+.heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 90px 40px;
+}
+
+.left {
+  max-width: 500px;
+}
+
+.left p {
+  font-size: 25px;
+  color: orange;
+  padding: 15px;
+}
+
+.left h1 {
+  font-size: 70px;
+  color: white;
+  margin: 10px 0;
+}
+
+.left p:last-of-type {
+  color: orange;
+  font-style: italic;
+}
+
+.left button {
+  margin-top: 25px;
+  padding: 12px 35px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.left button:hover {
+  background: orange;
+  border-color: orange;
+  color: black;
+}
+
+/* IMAGE CIRCLE */
+.right {
+  width: 380px;
+  height: 380px;
+  background-image: url(images/food1.avif);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.right::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.bottom {
+  margin: 60px 0;
+  display: none;
+}
+
+.menu-title {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+/* MENU GRID */
+
+.menu-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 40px;
+  position: relative;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 15px rgba(255, 165, 0, 0.6);
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 140px);
+  gap: 30px;
+  justify-content: center;
+  align-items: center; /* 🔥 STRETCH STOP */
+}
+
+/* CIRCLE BOX */
+.food {
+  width: 140px;
+  height: 140px;
+  min-width: 140px;
+  min-height: 140px;
+
+  border-radius: 50%;
+  border: 3px solid white;
+  overflow: hidden; /* MUST */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.food img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.food:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px orange;
+}
+
+/* FULLSCREEN IMAGE */
+
+.image-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 0 30px orange;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* FOOD POINTER */
+.food {
+  cursor: pointer;
+}
+/* ===== MENU SECTION ===== */
+.bottom {
+  margin: 60px 0;
+  display: none; /* HIDDEN INITIALLY */
+}
+
+.menu-title {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.food {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.food:hover {
+  transform: scale(1.1);
+}
+
+#food1 {
+  background-image: url(images/food1.avif);
+}
+
+#food2 {
+  background-image: url(images/food2.avif);
+}
+
+/* ===== FULLSCREEN IMAGE ===== */
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
