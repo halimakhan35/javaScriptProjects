@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Shop</title>
+    <link rel="stylesheet" href="/e-com/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">TECH<span>CORE</span></div>
+      <button id="cart-btn" class="nav-cart">
+        🛒 Cart <span id="cart-count">0</span>
+      </button>
+    </nav>
+
+    <main class="container">
+      <div class="product-card">
+        <div class="image-section">
+          <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600"
+            alt="Product"
+          />
+        </div>
+        <div class="info-section">
+          <span class="badge">New Arrival</span>
+          <h1>Smart Pro Watch</h1>
+          <p class="price">$199.00</p>
+          <p class="desc">
+            Experience the next generation of wearable technology. Sleek design,
+            24/7 health tracking, and seamless connectivity.
+          </p>
+
+          <div class="actions">
+            <button id="add-to-cart" class="btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Your Shopping Cart</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div id="cart-items" class="cart-body">
+          <p>No items added yet.</p>
+        </div>
+        <div class="modal-footer">
+          <h3>Total: <span id="cart-total">$0</span></h3>
+          <button class="btn-checkout">Checkout Now</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/e-com/js/app.js"></script>
+  </body>
+</html>
