@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Pulse | Full Pro Version</title>
+    <link rel="stylesheet" href="/foodwebsite/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Finance<span>Pulse</span></h1>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <span id="theme-text">Dark Mode</span>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <section class="form-card">
+                <h3>Add Expense</h3>
+                <form id="expense-form">
+                    <input type="text" id="desc" placeholder="Description" required>
+                    <input type="number" id="amount" step="0.01" placeholder="Amount ($)" required>
+                    <select id="category">
+                        <option value="Food">Food</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Fun">Fun</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <button type="submit" class="primary-btn">Add Transaction</button>
+                </form>
+            </section>
+
+            <section class="chart-card">
+                <h3>Spending Breakdown</h3>
+                <div class="canvas-container">
+                    <canvas id="expenseChart"></canvas>
+                </div>
+            </section>
+
+            <section class="list-card">
+                <div class="list-header">
+                    <h3>Recent Transactions</h3>
+                    <div class="filters">
+                        <select id="filter-category">
+                            <option value="All">All Categories</option>
+                            <option value="Food">Food</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Fun">Fun</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <button id="export-btn" class="export-btn">Export CSV</button>
+                        <button id="clear-btn" class="secondary-btn">Clear All</button>
+                    </div>
+                </div>
+                <ul id="expense-list"></ul>
+                <div class="total-display">
+                    Total: <span id="total-amount">$0.00</span>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/foodwebsite/js/script.js"></script>
+</body>
+</html>
