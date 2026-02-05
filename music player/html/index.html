@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Pulse | Pro Music Player</title>
+    <link rel="stylesheet" href="/music player/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="player-container">
+      <div class="nav-info">
+        <i class="fas fa-chevron-down"></i>
+        <span>PLAYING FROM PLAYLIST</span>
+        <i class="fas fa-list"></i>
+      </div>
+
+      <div class="image-container" id="img-box">
+        <img
+          src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=400"
+          alt="Album Art"
+          id="cover"
+        />
+      </div>
+
+      <div class="track-info">
+        <h1 id="title">Neon Dreams</h1>
+        <p id="artist">Future Funk Duo</p>
+      </div>
+
+      <div class="progress-area">
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+        <div class="time-wrapper">
+          <span id="current-time">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="main-btn">
+          <i class="fas fa-play" id="play-icon"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+
+      <div class="volume-container">
+        <i class="fas fa-volume-up" id="volume-icon"></i>
+        <input type="range" id="volume-slider" min="0" max="100" value="80" />
+        <span id="vol-value">80%</span>
+      </div>
+
+      <div class="footer-status">
+        TRACK <span id="track-index">1</span> OF 3
+      </div>
+    </div>
+
+    <audio id="main-audio"></audio>
+
+    <script src="/music player/js/script.js"></script>
+  </body>
+</html>
